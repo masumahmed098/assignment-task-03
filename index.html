@@ -18,7 +18,7 @@
        @layer{
         @keyframes scrolltext{
           0%{transform: translateX(-100px);}
-          100%{transform: translate(100px); }
+          100%{transform: translateX(100px); }
          }
 
           .animate-scroll{
@@ -27,7 +27,27 @@
 
        } 
        
+       /* Mobile Version */
+
+       @media (max-width:640px){
+        @keyframes scrolltext{
+          0%{transform: translateX(-30px);}
+          100%{transform: translateX(30px); }
+        }
+       }
     
+       /* Tablet Version */
+
+       @media (min-width:641px) and (max-width:1024px){
+        @keyframes scrolltext{
+          0%{transform: translateX(-70px);}
+          100%{transform: translateX(70px); }
+        }
+       }
+
+
+
+
     </style>
 
 </head>
