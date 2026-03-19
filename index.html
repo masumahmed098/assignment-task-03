@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solution Hub - Your All-in-One Problem Solver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS for sections 5–8 -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="./ITEMS/Logo.png" type="image/x-icon">
+
+   <style type="text/tailwindcss">
+      
+       @layer{
+        @keyframes scrolltext{
+          0%{transform: translateX(-100px);}
+          100%{transform: translate(100px); }
+         }
+
+          .animate-scroll{
+            animation:scrolltext 5s ease-in-out infinite alternate;
+          }
+
+       } 
+       
+    
+    </style>
+
+</head>
+
+
+
+<body class="font-sans bg-white text-gray-900">
+
+
+
+
+
+
+  <!--  SECTION 1: NAVBAR  (Tailwind)-->
+
+
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        
+        <div >
+          <img src="./ITEMS/Logo.png" alt="logo" class="w-8">
+        </div>
+        <p class="text-lg font-bold text-gray-900">Solution <span class="text-green-500">Hub</span></p>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden md:flex items-center gap-7 list-none">
+        <li><a href="#how" class="text-sm text-gray-600 hover:text-green-600 font-medium">How It Works</a></li>
+        <li><a href="#categories" class="text-sm text-gray-600 hover:text-green-600 font-medium">Categories</a></li>
+        <li><a href="#examples" class="text-sm text-gray-600 hover:text-green-600 font-medium">Examples</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-green-600 font-medium">About</a></li>
+      </ul>
+
+      <!-- Right side -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 font-medium">Sign In</a>
+        <a href="#" class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-lg animate-pulse">
+          Get Started Free
+        </a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-1 cursor-pointer bg-transparent border-0">
+        <span class="block w-6 h-0.5 bg-gray-600 rounded"></span>
+        <span class="block w-6 h-0.5 bg-gray-600 rounded"></span>
+        <span class="block w-6 h-0.5 bg-gray-600 rounded"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class=" md:hidden bg-white border-t border-gray-100 px-6 py-4 gap-3 hidden">
+      <a href="#how"        class="text-sm font-medium text-gray-700 py-1">How It Works</a>
+      <a href="#categories" class="text-sm font-medium text-gray-700 py-1">Categories</a>
+      <a href="#examples"   class="text-sm font-medium text-gray-700 py-1">Examples</a>
+      <a href="#"           class="text-sm font-medium text-gray-700 py-1">About</a>
+      <a href="#" class="bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-lg text-center mt-1">
+        Get Started Free
+      </a>
+    </div>
+  </nav>
+
+
+
+  
+  <!-- SECTION 2: HERO  (Tailwind)-->
+
+
+
+
+  <section class="pt-28 pb-20 px-5 bg-white text-center relative overflow-hidden " id="home">
+
+
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-1.5 bg-green-50 border border-green-700 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+
+    <img src="./ITEMS/problem-solving-icon.png" alt="" class="w-5 h-5">
+     <p class="font-bold">YOUR ALL-IN-ONE PROBLEM SOLVER</p>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6 max-w-3xl mx-auto">
+      Got a Problem? <span class="text-green-500">Find</span><br />
+      Your Solution <span class="text-gray-900">Here</span>
+    </h1>
+
+    <!-- Sub text -->
+    <p class="text-gray-500 text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+      From health to tech, study to daily life - get guidance instantly and
+      find the right help tailored to your needs.
+    </p>
+
+    <!-- Search box -->
+    <div class="max-w-xl mx-auto mb-5">
+      <div class="flex items-center bg-white border border-gray-200 rounded-xl px-4 py-1 shadow-sm gap-2">
+       
+          <img src="./ITEMS/search-icon.png" class="w-6 h-6">
+        
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Type your problem..."
+          class="flex-1 border-0 outline-none text-sm text-gray-700 py-2.5 bg-transparent font-sans"
+        />
+        <button class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-lg flex items-center gap-1">
+        Find Help
+        </button>
+      </div>
+    </div>
+
+    <!-- Popular tags -->
+    <div class="flex items-center justify-center gap-2 flex-wrap mb-10 text-sm text-gray-500">
+      <span class="font-medium">Popular:</span>
+      <p class="bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-600 cursor-pointer hover:bg-green-50 hover:text-green-700">  Anxiety &amp; stress</p>
+      <p class="bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-600 cursor-pointer hover:bg-green-50 hover:text-green-700">WiFi not working</p>
+      <p class="bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-600 cursor-pointer hover:bg-green-50 hover:text-green-700">Can't focus on studies</p>
+      <p class="bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-600 cursor-pointer hover:bg-green-50 hover:text-green-700">Budget planning</p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="flex items-center justify-center gap-6 flex-wrap animate-scroll ">
+
+      
+      <div class="flex items-center gap-5 ">
+
+        <div class="flex gap-1">
+
+          <div class="w-6 h-6 ">
+            <img src="./ITEMS/healthcare-icon.png">
+          </div>
+          <div class="w-6 h-6 ">
+            <img src="./ITEMS/technology-icon.png">
+          </div>
+          <div class="w-6 h-6 ">
+            <img src="./ITEMS/study-icon.png">
+          </div>
+          <div class="w-6 h-6 ">
+            <img src="./ITEMS/pen-icon.png">
+          </div>
+        </div>
+        <div class="text-left">
+          <p class="text-sm font-bold text-gray-800">12,400+</p>
+          <p class="text-xs text-gray-400">problems solved</p>
+        </div>
+      </div>
+
+      <div class="w-px h-8 bg-green-300"></div>
+
+      <!-- Stars -->
+      <div class="flex items-center gap-1.5">
+        <div class="flex text-yellow-400 text-sm">★★★★★</div>
+        <p class="text-sm font-semibold text-gray-700">4.9/5</p>
+        <p class="text-xs text-gray-400">rating</p>
+      </div>
+
+      <div class="w-px h-8 bg-green-300"></div>
+
+      <!-- Free -->
+      <div class="flex items-center gap-1.5">
+        
+        <img src="./ITEMS/free-icon.png" class="w-6 h-6  inline-block">
+        <p class="text-sm font-semibold text-gray-700">100% Free to use</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--SECTION 3: HOW IT WORKS  (Tailwind)-->
+
+
+  <section class="py-20 px-5 bg-white" id="how">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <p class="text-[15px] font-bold tracking-widest border rounded-3xl border-green-600 w-[300px] m-auto p-2.5 text-green-600 uppercase mb-3">HOW IT WORKS</p>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Three Simple Steps to Any Solution</h2>
+      <p class="text-gray-500 text-base mb-14">No complexity, no waiting. Just clear answers in moments.</p>
+
+      <!-- Steps grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Step 1 -->
+        <div class="border border-gray-100 rounded-2xl p-6 text-left  shadow shadow-[5px 5px] shadow-green-300">
+          <p class="text-xs font-bold text-green-300 mb-4">#1</p>
+         
+          <div class="w-10 h-10 bg-green-50 rounded-xl mb-4 flex items-center justify-center">
+            <img src="ITEMS/pen-icon.png" class="w-6 h-6">
+          </div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Enter Your Problem</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Simply type what's bothering you- no filters, no forms. Just describe it in your own words.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="border border-gray-100 rounded-2xl p-6 text-left shadow shadow-[5px 5px] shadow-green-300">
+          <p class="text-xs font-bold text-green-300 mb-4">#2</p>
+          
+          <div class="w-10 h-10 bg-green-50 rounded-xl mb-4 flex items-center justify-center">
+
+            <img src="ITEMS/knowledge-icon.png" class="w-6 h-6">
+
+          </div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Get Quick Understanding</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Our system analyzes your problem in seconds and breaks it down into possible causes and context.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="border border-gray-100 rounded-2xl p-6 text-left shadow shadow-[5px 5px] shadow-green-300">
+          <p class="text-xs font-bold text-green-300 mb-4">#3</p>
+         
+          <div class="w-10 h-10 bg-green-50 rounded-xl mb-4 flex items-center justify-center">
+            
+            <img src="ITEMS/help-icon.png" class="w-6 h-6">
+
+          </div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Find the Right Help</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Receive clear, actionable solutions and connect with resources or experts tailored to your situation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SECTION 4: CATEGORIES  (Tailwind)-->
+
+
+  <section class="py-20 px-5 bg-gray-50" id="categories">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <p class="text-[15px] font-bold tracking-widest border rounded-3xl border-green-600 w-[300px] m-auto p-2.5 text-green-600 uppercase mb-3">PROBLEM CATEGORIES</p>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Whatever Your Problem, We've Got You</h2>
+      <p class="text-gray-500 text-base mb-14">
+        Explore solutions across four core life areas, each with thousands of curated answers.
+      </p>
+
+      <!-- Category cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
+
+        <!-- Health -->
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 hover:shadow-green-500  transition-shadow shadow shadow-[5px 5px] shadow-green-300">
+          <div class="flex justify-between items-start mb-3">
+            
+            <div class="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center">
+
+              <img src="./ITEMS/healthcare-icon.png" class="w-6 h-6">
+
+            </div>
+            <span class="text-xs text-gray-400 font-medium">5,300+</span>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Health Issues</h3>
+          <p class="text-xs text-gray-500 leading-relaxed mb-3">
+            Mental health, physical symptoms, nutrition, sleep disorders, and wellness guidance.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <p class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-medium">Anxiety</p>
+            <p class="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full font-medium">Headaches</p>
+            <p class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">Sleep</p>
+            <p class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-medium">Diet</p>
+          </div>
+        </div>
+
+        <!-- Tech -->
+        <div class="bg-white border border-gray-100 rounded-2xl p-5  hover:shadow-green-500  transition-shadow shadow shadow-[5px 5px] shadow-green-300">
+          <div class="flex justify-between items-start mb-3">
+           
+            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
+
+              <img src="./ITEMS/technology-icon.png" class="w-6 h-6">
+
+            </div>
+            <span class="text-xs text-gray-400 font-medium">4,900+</span>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Tech Problems</h3>
+          <p class="text-xs text-gray-500 leading-relaxed mb-3">
+            Software bugs, connectivity issues, device troubleshooting, and coding help.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <p class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">WiFi</p>
+            <p class="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full font-medium">Bugs</p>
+            <p class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-medium">Devices</p>
+            <p class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full font-medium">Code</p>
+          </div>
+        </div>
+
+        <!-- Study -->
+        <div class="bg-white border border-gray-100 rounded-2xl p-5  hover:shadow-green-500  transition-shadow shadow shadow-[5px 5px] shadow-green-300">
+          <div class="flex justify-between items-start mb-3">
+           
+            <div class="w-10 h-10 bg-yellow-50 rounded-xl flex items-center justify-center">
+
+              <img src="./ITEMS/study-icon.png" class="w-6 h-6">
+
+            </div>
+            <span class="text-xs text-gray-400 font-medium">3,800+</span>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Study &amp; Focus</h3>
+          <p class="text-xs text-gray-500 leading-relaxed mb-3">
+            Study strategies, concentration tips, exam prep, memory techniques, and learning hacks.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <p class="text-xs bg-yellow-50 text-yellow-600 px-2 py-0.5 rounded-full font-medium">Focus</p>
+            <p class="text-xs bg-pink-50 text-pink-600 px-2 py-0.5 rounded-full font-medium">Exams</p>
+            <p class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">Memory</p>
+          </div>
+        </div>
+
+        <!-- Finance -->
+        <div class="bg-white border border-gray-100 rounded-2xl p-5  hover:shadow-green-500  transition-shadow shadow shadow-[5px 5px] shadow-green-300">
+          <div class="flex justify-between items-start mb-3">
+            
+            <div class="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center">
+
+              <img src="./ITEMS/dailylife-icon.png" class="w-6 h-6">
+
+            </div>
+            <span class="text-xs text-gray-400 font-medium">2,900+</span>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Daily Life &amp; Finance</h3>
+          <p class="text-xs text-gray-500 leading-relaxed mb-3">
+            Budgeting, debt management, life organization, relationships, and financial planning.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <p class="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full font-medium">Budget</p>
+            <p class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">Savings</p>
+            <p class="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-medium">Debt</p>
+            <p class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-medium">Goals</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 5: EXAMPLE SOLUTIONS  (CSS file)-->
+
+
+  <section class="examples-section" id="examples">
+    <p class="examples-label"> EXAMPLE SOLUTIONS</p>
+    <h2 class="examples-title">See How It Works in Real Life</h2>
+    <p class="examples-sub">Here's a peek at real problem-solution cards generated on the platform.</p>
+
+    <div class="examples-grid">
+
+      <!-- Card 1: Health -->
+      <div class="solution-card">
+        <div class="card-header">
+          <p class="card-tag tag-health">Health</p>
+          <p class="card-tag tag-moderate">Moderate severity</p>
+        </div>
+        <p class="card-question">"I can't stop feeling anxious and overwhelmed every day"</p>
+
+        <p class="card-section-title">⚠ Possible Causes</p>
+        <ul class="card-list">
+          <li>Chronic stress from work or studies</li>
+          <li>Poor sleep patterns and fatigue</li>
+          <li>Overthinking and rumination cycles</li>
+          <li>Lack of physical activity or sunlight</li>
+        </ul>
+
+        <p class="card-section-title">✦ Simple Solutions</p>
+        <ul class="card-list solution-list">
+          <li>Practice 5-minute daily mindfulness or deep breathing</li>
+          <li>Limit social media consumption, especially at night</li>
+          <li>Establish a consistent sleep schedule (7-9 hours)</li>
+          <li>Exercise for 20-30 mins, even light walks help</li>
+        </ul>
+
+        <p class="card-section-title">🔗 Recommended Help</p>
+        <div class="card-help-list">
+          <span class="help-item">BetterHelp Therapy</span>
+          <span class="help-item">Calm App (Meditation)</span>
+          <span class="help-item">Talk to a GP</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Tech -->
+      <div class="solution-card">
+        <div class="card-header">
+          <span class="card-tag tag-tech">Tech</span>
+          <span class="card-tag tag-low">Low severity</span>
+        </div>
+        <p class="card-question">"My WiFi keeps disconnecting every few minutes"</p>
+
+        <p class="card-section-title">⚠ Possible Causes</p>
+        <ul class="card-list">
+          <li>Router firmware is outdated or overheated</li>
+          <li>Too many devices on one network</li>
+          <li>Signal interference from nearby networks</li>
+          <li>Faulty network adapter drivers on device</li>
+        </ul>
+
+        <p class="card-section-title">✦ Simple Solutions</p>
+        <ul class="card-list solution-list">
+          <li>Restart router and modem, wait 60 seconds</li>
+          <li>Update router firmware via admin panel</li>
+          <li>Change WiFi channel to less crowded one (use 5Ghz)</li>
+          <li>Update or reinstall network adapter drivers</li>
+        </ul>
+
+        <p class="card-section-title">🔗 Recommended Help</p>
+        <div class="card-help-list">
+          <span class="help-item">ISP Support Line</span>
+          <span class="help-item">Reddit r/techsupport</span>
+          <span class="help-item">Router Admin Guide</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="examples-btn" class="animate-pulse">Try It With Your Own Problem →</button>
+  </section>
+
+
+  <!-- SECTION 6: TESTIMONIALS  (CSS file) -->
+
+
+  <section class="testimonials-section">
+    <p class="testimonials-label">TESTIMONIALS</p>
+    <h2 class="testimonials-title">Real People. Real Results.</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I was struggling with constant anxiety and couldn't pinpoint why. Solution Hub gave me a clear breakdown and connected me to a therapist in under 3 minutes."
+        </p>
+        <div class="testimonial-author">
+         
+          <div class="author-avatar avatar-pink">P</div>
+          <div>
+            <p class="author-name">Priya M.</div>
+            <p class="author-role">Graduate Student</p>
+          </div>
+        </div>
+      
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "My laptop wouldn't connect to WiFi. Spent hours searching online. Solution Hub diagnosed the exact issue and I fixed it in 10 minutes flat. Incredible."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar avatar-blue">J</div>
+          <div>
+            <p class="author-name">James K.</p>
+            <p class="author-role">Freelance Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I've been terrible at saving money. The budgeting framework Solution Hub suggested actually worked. I saved $400 in my first month!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar avatar-green">S</div>
+          <div>
+            <p class="author-name">Sofia R.</p>
+            <p class="author-role">Marketing Manager</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    
+  </section>
+
+
+
+  <!--SECTION 7: NEWSLETTER  (CSS file)-->
+
+
+
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div>
+        <h3 class="newsletter-title">Get weekly problem-solving tips</h3>
+        <p class="newsletter-sub">Join 8,000+ subscribers. No spam, just helpful insights.</p>
+      </div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address" />
+        <button class="newsletter-btn">Subscribe →</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!--   SECTION 8: FOOTER  (CSS file)-->
+
+
+
+  <footer class="footer">
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-name">
+          
+          <img src="./ITEMS/Logo.png" style="width:30px; height:30px;">
+          Solution<span>Hub</span>
+
+        </div>
+        <p class="footer-brand-desc">
+          Your all-in-one problem solving platform. From health to tech, study to daily life - get guidance instantly.
+        </p>
+        <div class="footer-socials">
+          
+
+          <div class="social-icon">
+
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="./Social Icons/facebook.png" >
+            </a>
+
+          </div>
+
+          <div class="social-icon">
+
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="./Social Icons/instagram.png" >
+            </a>
+
+          </div>
+
+          <div class="social-icon">
+
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="./Social Icons/linkedin.png" >
+            </a>
+
+          </div>
+
+          <div class="social-icon">
+
+            <a href="https://www.tiktok.com" target="_blank">
+              <img src="./Social Icons/tik-tok.png" >
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <p class="footer-col-title">Product</p>
+        <ul class="footer-col-links">
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Examples</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-col-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <p class="footer-col-title">Support</p>
+        <ul class="footer-col-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <ul class="footer-col-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p class="footer-copy">© 2026 Solution Hub. All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+
+ 
+
+</body>
+</html>
